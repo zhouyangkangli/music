@@ -31,16 +31,15 @@ ApplicationWindow {
         //         action: actions.open
         //     }
         // }
-        Menu {
-            title: qsTr("Mode")
-            MenuItem {
-                action: actions.loop
-            }
-            MenuItem {
-                action: actions.random
-            }
-        }
-
+        // Menu {
+        //     title: qsTr("Mode")
+        //     MenuItem {
+        //         action: actions.loop
+        //     }
+        //     MenuItem {
+        //         action: actions.random
+        //     }
+        // }
         Menu {
             title: qsTr("Setting")
             MenuItem {
