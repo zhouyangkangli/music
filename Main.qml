@@ -25,12 +25,12 @@ ApplicationWindow {
     // -------设置菜单栏------
     menuBar: MenuBar {
 
-        // Menu {
-        //     title: qsTr("Open")
-        //     MenuItem {
-        //         action: actions.open
-        //     }
-        // }
+        Menu {
+            title: qsTr("Open")
+            MenuItem {
+                action: actions.open
+            }
+        }
         Menu {
             title: qsTr("Mode")
             MenuItem {
