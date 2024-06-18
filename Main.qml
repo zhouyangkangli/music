@@ -40,7 +40,7 @@ ApplicationWindow {
         //         action: actions.random
 
         //     }
-        }
+        //}
         Menu {
             title: qsTr("Setting")
             MenuItem {

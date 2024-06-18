@@ -187,33 +187,6 @@ Frame {
             ListModel {
                 id: _filesModel
             }
-
-            delegate: imageDelegate
-        }
-        Component {
-            id: imageDelegate
-            Image {
-                id: image
-                width: multiPics.cellWidth - 10
-                height: multiPics.cellHeight - 10
-                fillMode: multiPics.fillMode
-                asynchronous: true
-                source: filePath
-
-                //            Text {
-                //                id: name
-                //                text: qsTr("index:"+index)
-                //            }
-                TapHandler {
-                    id: mouseArea
-                    onTapped: {
-                        multiPics.currentIndex = index
-                        console.currentIndex = index
-                        console.log("currentIndex in multiPics:",
-                                    multiPics.currentIndex)
-                    }
-                }
-            }
         }
     }
 }
