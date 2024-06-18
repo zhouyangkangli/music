@@ -65,5 +65,9 @@ ApplicationWindow {
 
     Actions{
         id:actions
+        background.onTriggered: content.popupbackgrounde.open()
+    }
+    Content{
+        id:content
     }
 }
