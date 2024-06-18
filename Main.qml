@@ -1,5 +1,4 @@
 
-
 /* MusicPlayer is a free music player.
 <<<<<<< HEAD
 =======
@@ -61,13 +60,13 @@ ApplicationWindow {
     header: ToolBar {
         RowLayout {
             ToolButton {
-                action: actions.open
+                action: actions.loop
             }
 
             ToolSeparator {}
 
             ToolButton {
-                action: actions.loop
+                action: actions.open
             }
             ToolButton {
                 action: actions.random
