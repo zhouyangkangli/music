@@ -1,9 +1,9 @@
-7/* MusicPlayer is a free music player.
+
+
+/* MusicPlayer is a free music player.
  * The file defines the appwindow of musicplayer, and setts up all UI's logic, except the content's.
  * Author: 何泳珊 高永艳 周扬康丽
 */
-
-
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
@@ -18,53 +18,76 @@ ApplicationWindow {
     menuBar: MenuBar {
         Menu {
             title: qsTr("Open")
-            MenuItem { action: actions.open}
+            MenuItem {
+                action: actions.open
+            }
         }
 
-        Menu{
-            title:qsTr("Mode")
-            MenuItem{ action: actions.loop}
-            MenuItem{ action: actions.random}
+        Menu {
+            title: qsTr("Mode")
+            MenuItem {
+                action: actions.loop
+            }
+            MenuItem {
+                action: actions.random
+            }
         }
 
-        Menu{
-            title:qsTr("Setting")
-            MenuItem{ action: actions.background}
-            MenuItem{ action: actions.timingoff}
+        Menu {
+            title: qsTr("Setting")
+            MenuItem {
+                action: actions.background
+            }
+            MenuItem {
+                action: actions.timingoff
+            }
         }
 
-        Menu{
-            title:qsTr("About")
-            MenuItem{ action: actions.about}
+        Menu {
+            title: qsTr("About")
+            MenuItem {
+                action: actions.about
+            }
         }
     }
-
 
     // -------设置工具栏------
     header: ToolBar {
-        RowLayout{
-            ToolButton{ action: actions.open }
+        RowLayout {
+            ToolButton {
+                action: actions.open
+            }
 
-            ToolSeparator{}
+            ToolSeparator {}
 
-            ToolButton{ action: actions.loop}
-            ToolButton{ action: actions.random}
+            ToolButton {
+                action: actions.loop
+            }
+            ToolButton {
+                action: actions.random
+            }
 
-            ToolSeparator{}
+            ToolSeparator {}
 
-            ToolButton{ action: actions.background}
-            ToolButton{ action: actions.timingoff}
+            ToolButton {
+                action: actions.background
+            }
+            ToolButton {
+                action: actions.timingoff
+            }
 
-            ToolSeparator{}
+            ToolSeparator {}
 
-            ToolButton{ action: actions.about}
+            ToolButton {
+                action: actions.about
+            }
         }
     }
 
-    footer:Footer{}
+    footer: Footer {}
 
-    Actions{
-        id:actions
+    Actions {
+        id: actions
     }
     Content {
         id: content
