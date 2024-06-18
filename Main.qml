@@ -1,4 +1,4 @@
-/* MusicPlayer is a free music player.
+7/* MusicPlayer is a free music player.
  * The file defines the appwindow of musicplayer, and setts up all UI's logic, except the content's.
  * Author: 何泳珊 高永艳 周扬康丽
 */
@@ -69,5 +69,8 @@ ApplicationWindow {
     }
     Content{
         id:content
+    }
+    Content {
+        id: content
     }
 }
