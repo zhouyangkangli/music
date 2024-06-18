@@ -1,6 +1,9 @@
 
 
 /* MusicPlayer is a free music player.
+=======
+7/* MusicPlayer is a free music player.
+>>>>>>> origin/main
  * The file defines the appwindow of musicplayer, and setts up all UI's logic, except the content's.
  * Author: 何泳珊 高永艳 周扬康丽
 */
@@ -99,9 +102,9 @@ ApplicationWindow {
         volumeSlider.value: content.audio.volume
         volumeSlider.onMoved: content.audio.volume = volumeSlider.value
     }
-
     Actions {
         id: actions
+        background.onTriggered: content.popupbackgrounde.open()
         open.onTriggered: Controller.open()
     }
     Content {
