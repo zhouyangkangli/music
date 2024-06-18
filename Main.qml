@@ -1,12 +1,20 @@
 
 
 /* MusicPlayer is a free music player.
+<<<<<<< HEAD
+=======
+=======
+7/* MusicPlayer is a free music player.
+>>>>>>> origin/main
+>>>>>>> origin/main
  * The file defines the appwindow of musicplayer, and setts up all UI's logic, except the content's.
  * Author: 何泳珊 高永艳 周扬康丽
 */
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
+
+import "freemusic.js" as Controller
 
 ApplicationWindow {
     width: 640
@@ -84,10 +92,23 @@ ApplicationWindow {
         }
     }
 
-    footer: Footer {}
+    footer: Footer {
+        // property alias playProgressSlider: _playProgressSlider
+        // property alias volumeSlider: _volumeSlider
+        playProgressSlider.to: content.playmusic.duration
+        playProgressSlider.value: content.playmusic.position
+        playProgressSlider.onMoved: {
+            content.playmusic.position = value
+        }
 
+        volumeSlider.to: 1.0
+        volumeSlider.value: content.audio.volume
+        volumeSlider.onMoved: content.audio.volume = volumeSlider.value
+    }
     Actions {
         id: actions
+        background.onTriggered: content.popupbackgrounde.open()
+        open.onTriggered: Controller.open()
     }
     Content {
         id: content

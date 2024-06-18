@@ -14,12 +14,13 @@ qt_add_qml_module(appMusicPlayer
     URI MusicPlayer
     VERSION 1.0
     QML_FILES
-        Main.qml
+    Main.qml
     SOURCES
     QML_FILES Actions.qml
     QML_FILES Content.qml
     QML_FILES Dialogs.qml
     QML_FILES Footer.qml
+    QML_FILES freemusic.js
 )
 
 target_compile_features(appMusicPlayer PRIVATE cxx_std_20)
@@ -34,7 +35,7 @@ set_target_properties(appMusicPlayer PROPERTIES
 )
 
 target_link_libraries(appMusicPlayer
-    PRIVATE 
+    PRIVATE
         Qt6::Quick
 )
 
@@ -122,9 +123,9 @@ install(TARGETS appMusicPlayer
 #     @if %{HasTranslation}
 #         %{TsFileName}
 #     @endif
-#         
+#
 #     PUBLIC
-#         
+#
 # )
 
 # qt_import_qml_plugins(MusicPlayer)
@@ -146,16 +147,16 @@ install(TARGETS appMusicPlayer
 
 
 # cmake_minimum_required(VERSION 3.16)
-# 
+#
 # project(MusicPlayer VERSION 0.1 LANGUAGES CXX)
-# 
+#
 # @if !true
 # set(CMAKE_AUTOMOC ON)
 # @endif
 # set(CMAKE_CXX_STANDARD_REQUIRED ON)
-# 
+#
 # find_package(Qt6 6.5 REQUIRED COMPONENTS Quick)
-# 
+#
 # @if true
 # @if true
 # qt_standard_project_setup(REQUIRES 6.5)
@@ -163,17 +164,17 @@ install(TARGETS appMusicPlayer
 # qt_standard_project_setup()
 # @endif
 # @endif
-# 
+#
 # qt_add_executable(appMusicPlayer
 #     main.cpp
 # )
-# 
+#
 # qt_add_qml_module(appMusicPlayer
 #     URI MusicPlayer
 #     VERSION 1.0
 #     QML_FILES Main.qml
 # )
-# 
+#
 # # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # # If you are developing for iOS or macOS you should consider setting an
 # # explicit, fixed bundle identifier manually though.
@@ -184,11 +185,11 @@ install(TARGETS appMusicPlayer
 #     MACOSX_BUNDLE TRUE
 #     WIN32_EXECUTABLE TRUE
 # )
-# 
+#
 # target_link_libraries(appMusicPlayer
 #     PRIVATE Qt6::Quick
 # )
-# 
+#
 # include(GNUInstallDirs)
 # install(TARGETS appMusicPlayer
 #     BUNDLE DESTINATION .
